@@ -1,0 +1,16 @@
+VCore Engine Platform — proprietary evaluation distribution
+
+Copyright (c) 2026 VoigtCore. All rights reserved.
+
+This artifact is supplied for the engine development and evaluation authorized by
+its owner. It does not grant access to the private VCore Core, private engines,
+production services, admission authority or their confidential material.
+Redistribution, commercial licensing and publication require the owner's
+authorization and applicable separate terms. No open-source license is implied.
+
+Third-party components retain their own licenses. The Windows distribution
+includes the unmodified Node.js runtime and its complete license notices at
+runtime/NODE-LICENSE.txt. This notice does not modify those third-party rights.
+
+Experimental software; production readiness is not asserted. Legal/commercial
+distribution terms must be approved by the owner before public publication.

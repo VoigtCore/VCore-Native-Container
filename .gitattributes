@@ -1,0 +1,3 @@
+* text=auto eol=lf
+*.vc -text
+*.png binary
