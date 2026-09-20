@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "checked_files": 35,
+  "scanned_texts": 55,
+  "decoded_package_entries": 22,
+  "sensitive_pattern_matches": 0,
+  "private_databases": 0,
+  "private_keys": 0,
+  "demo_contract_tests": "PASS",
+  "demo_signature": "SIGNATURE_VALID",
+  "execution_authorized": false,
+  "documentation_links": "PASS",
+  "archive_hash": "PASS",
+  "scope": "Public repository allowlist, known secret patterns, decoded demo entries and previously audited public Studio archive. Not a proof that arbitrary secrets can never exist."
+}
