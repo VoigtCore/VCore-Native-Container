@@ -1,0 +1,108 @@
+{
+  "manifest": {
+    "engine_id": "hello-vcore",
+    "engine_version": "1.0.0",
+    "contract_version": "1.0.0",
+    "entrypoint": "engine/src/entry.mjs",
+    "platform": "win32",
+    "architecture": "x64",
+    "capabilities": [
+      "health.read"
+    ],
+    "resource_limits": {
+      "cpu_percent": 20,
+      "memory_mb": 512,
+      "max_processes": 1,
+      "timeout_ms": 10000,
+      "max_events": 32,
+      "max_message_bytes": 4096
+    },
+    "filesystem_policy": "APPCONTAINER_PRIVATE",
+    "network_policy": "DENY_ALL",
+    "dependencies": [
+      {
+        "id": "node",
+        "version": "24.13.1",
+        "sha256": "e3be0545990c90995d7bf3a7af5d64af1f2e0fc1bbd9b79c27f7abc1e9676e50"
+      }
+    ]
+  },
+  "contract": {
+    "id": "health.contract",
+    "version": "1.0.0",
+    "definition": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "enum": [
+            "READY",
+            "RUNNING",
+            "PAUSED",
+            "STOPPED",
+            "FAILED"
+          ]
+        },
+        "availability": {
+          "enum": [
+            "AVAILABLE",
+            "UNAVAILABLE"
+          ]
+        },
+        "detail": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+        }
+      },
+      "required": [
+        "status",
+        "availability",
+        "detail"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "files": [
+    {
+      "source": "src/main.mjs",
+      "path": "engine/src/main.mjs",
+      "sha256": "73adeb52d9e99b9830a0bf6d2dec09c0dd3eb91e512752c02029c21b1d6733f9"
+    },
+    {
+      "source": "src/entry.mjs",
+      "path": "engine/src/entry.mjs",
+      "sha256": "bd5d0fdf6727303beb59ce4741b48487afbf9da772c0ae749c21debc19254590"
+    },
+    {
+      "source": "public/sdk/engine.js",
+      "path": "engine/public/sdk/engine.js",
+      "sha256": "7cf1008a6fcf2731693f2e4b3e26aad29cab2ec8b41025d37edc8310c0bf6d94"
+    },
+    {
+      "source": "public/sdk/index.js",
+      "path": "engine/public/sdk/index.js",
+      "sha256": "adb86dd4a2637d35c9022ae91046b13ccd0f8cbb653245fb4abfd9265930a647"
+    },
+    {
+      "source": "public/sdk/health.js",
+      "path": "engine/public/sdk/health.js",
+      "sha256": "cbdb8b4847a646a750d3e6ab03a168632fa50a2354730fb30cc85d759d9aeb8f"
+    },
+    {
+      "source": "public/contracts/schema.js",
+      "path": "engine/public/contracts/schema.js",
+      "sha256": "a7ebf5f1689b84819cf3b50f5906ba21e5db9314df917019b06511540f8638bf"
+    },
+    {
+      "source": "public/contracts/index.js",
+      "path": "engine/public/contracts/index.js",
+      "sha256": "5b3b9eeab15c301cb1e79752d2d035041990eea0a0e505bb65fa89dd9de99097"
+    },
+    {
+      "source": "public/contracts/engine.js",
+      "path": "engine/public/contracts/engine.js",
+      "sha256": "95870128c36d0fc014ebe3ddb54c47f8368b96a0bcd0d460dad6446b5ed9ef35"
+    }
+  ]
+}
