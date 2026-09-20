@@ -1,0 +1,15 @@
+{
+  "schema": "vcore.public-demo/1",
+  "engine": "hello-vcore",
+  "version": "1.0.0",
+  "target": "win32-x64",
+  "node": "24.13.1",
+  "signature": "SIGNATURE_VALID",
+  "publisher_key_id": "a79bb33f51f67f8f70737db8dd8fee1da3f941cd11f8e11dfb2304828402c5d9",
+  "package_hash": "d536321d82e39edc1f66eb48cffed14022b0e84c72c335dc718d9e30c684815c",
+  "authority": "DISPOSABLE_DEMO_SIGNER_NOT_OFFICIAL_PUBLISHER",
+  "trust": "NOT_EVALUATED",
+  "admission": "NOT_EVALUATED",
+  "private_key_written": false,
+  "engine_reports": "OWN_READINESS_ONLY"
+}
